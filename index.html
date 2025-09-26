@@ -4,81 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>کافه آرگا</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-	
-	
-	
-  <style>
-    
-  </style>
+  <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="script.js">
 </head>
 <body>
+  <!-- هدر -->
+ 
+    <div class="logo">آرگا</div>
 
-  <header>
-    <h1>کافه آرگا</h1>
-    <p>منوی خوراکی‌ها و نوشیدنی‌ها</p>
-  </header>
+  <!-- بخش هرو (عکس بالا) -->
+  <section class="hero">
+    <img src="pic/unnamed.webp" alt="چای آرگا">
+    <div class="hero-text">خوش آمدید</div>
+  </section>
 
-  <section class="menu-section">
-    <h2>نوشیدنی‌های گرم</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
+  <!-- کارت‌ها -->
+  <section class="menu">
+	  
+	<h5>نوشیدنی‌های گرم</h5>
+	  
+	<div class="card">
+      <img src="pic/tork.png" alt="قهوه ترک">
+      <div class="card-content">
         <h3>قهوه ترک</h3>
-        <p class="price">50,000 تومان</p>
-      </div>
-      <div class="menu-item">
-        <h3>لاته</h3>
-        <p class="price">65,000 تومان</p>
+        <p>یک قهوه اصیل با عطر و طعم خاص که با روش سنتی دم‌آوری می‌شود.</p>
+        <span class="price">45,000 تومان</span>
       </div>
     </div>
-  </section>
 
-  <section class="menu-section">
-    <h2>نوشیدنی‌های سرد</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
+    <div class="card">
+      <img src="pic/esperso.png" alt="اسپرسو">
+      <div class="card-content">
+        <h3>اسپرسو</h3>
+        <p>قهوه‌ای غلیظ با کرمای طلایی، مخصوص علاقه‌مندان طعم قوی.</p>
+        <span class="price">55,000 تومان</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="pic/capochino.png" alt="کاپوچینو">
+      <div class="card-content">
+        <h3>کاپوچینو</h3>
+        <p>ترکیبی از اسپرسو، شیر بخار داده شده و فوم شیر نرم.</p>
+        <span class="price">60,000 تومان</span>
+      </div>
+    </div>
+	  
+	<h5>نوشیدنی‌های سرد</h5>
+
+    <div class="card">
+      <img src="pic/limoonad.png" alt="لیموناد">
+      <div class="card-content">
+        <h3> لیموناد</h3>
+        <p>نوشیدنی خنک و تازه با طعم لیموی طبیعی.</p>
+        <span class="price">85,000 تومان</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="pic/milkshake.png" alt="شیک شکلات">
+      <div class="card-content">
         <h3>شیک شکلات</h3>
-        <p class="price">80,000 تومان</p>
-      </div>
-      <div class="menu-item">
-        <h3>لیموناد</h3>
-        <p class="price">55,000 تومان</p>
+        <p>ترکیب غلیظ بستنی و شکلات خوش‌طعم.</p>
+        <span class="price">110,000 تومان</span>
       </div>
     </div>
-  </section>
 
-  <section class="menu-section">
-    <h2>دسر و کیک</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <h3>چیزکیک</h3>
-        <p class="price">70,000 تومان</p>
-      </div>
-      <div class="menu-item">
-        <h3>براونی</h3>
-        <p class="price">65,000 تومان</p>
+    <div class="card">
+      <img src="pic/smoothie.png" alt="اسموتی">
+      <div class="card-content">
+        <h3>اسموتی</h3>
+        <p>ترکیب میوه‌های تازه و طبیعی برای حس طراوت.</p>
+        <span class="price">95,000 تومان</span>
       </div>
     </div>
-  </section>
 
-  <section class="menu-section">
-    <h2>سیگار و قلیان</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <h3>قلیان دوسیب</h3>
-        <p class="price">120,000 تومان</p>
-      </div>
-      <div class="menu-item">
-        <h3>سیگار مارلبرو</h3>
-        <p class="price">150,000 تومان</p>
-      </div>
-    </div>
   </section>
+	
+   <button onclick="topFunction()" id="scrollBtn" title="برو بالا">↑</button>
 
+  <script src="script.js"></script> <!-- لینک به js -->
+
+  <!-- فوتر -->
   <footer>
-    <p>© 2025 کافه آرگا | طراحی با عشق ☕🌿</p>
+    <p>© 2025 کافه آرگا - همه حقوق محفوظ است.</p>
   </footer>
-
 </body>
 </html>

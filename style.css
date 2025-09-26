@@ -1,89 +1,157 @@
+/* فونت و ریست */
 body {
-      font-family: 'Vazirmatn', sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #f3e9dc 0%, #d9cfc1 40%, #a8c3a4 100%);
-      color: #333;
-    }
-
-    header {
-      background-color: #5a3825;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    .menu-section {
-      padding: 1.5rem;
-    }
-
-    .menu-section h2 {
-      color: #3f6b4f;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-	  text-align: right;
-	  border-radius: 2rem;
-	  border-right: 3px solid #FFFFFF;
-	  border-bottom: 3px solid #FFFFFF;
-	  padding: 0 1rem;
-	  transition: all.4s
-    }
-    .menu-section h2:hover{
-	  padding: 0.5rem 1rem;
-	  transition: all.4s
+  margin: 0;
+  font-family: tahoma, sans-serif;
+  background: linear-gradient(135deg, #3e2723, #6d4c41, #a1887f);
+  color: #fff;
 }
 
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
+/* هدر */
 
-    .menu-item {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
 
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
+.logo {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc80;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  margin: 1rem 0
+}
 
-    .menu-item h3 {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
-      color: #5a3825;
-    }
+/* هرو */
+.hero {
+  position: relative;
+  text-align: center;
+}
 
-    .price {
-      color: #3f6b4f;
-      font-weight: bold;
-      font-size: 1rem;
-    }
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0 0 2rem 2rem  
+}
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #5a3825;
-      color: #fff;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
+.hero-text {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-size: 1.5rem
+}
 
-    /* رسپانسیو برای موبایل */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .menu-section h2 {
-        font-size: 1.1rem;
-      }
-    }
+/* کارت‌ها */
+.menu {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+
+.menu h5 {
+    color: #ffcc80;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: right;
+    border-radius: 2rem;
+    border-right: 3px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+    padding: 1rem;
+    transition: all .4s;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: right;
+  flex: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #ffcc80;
+}
+
+.card-content p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffd54f;
+}
+
+/* واکنش‌گرا */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+}
+
+/* دکمه اسکرول به بالا */
+#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #6b4226, #c69c72); /* گرادینت کافه‌ای */
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: none; /* اول مخفیه */
+}
+
+#scrollBtn:hover {
+  background: linear-gradient(135deg, #c69c72, #6b4226);
+  transform: scale(1.1);
+}
+
+
+/* فوتر */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  margin-top: 30px;
+  font-size: 14px;
+}
