@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'Vazir';
+  src: url('fonts/Vazir.woff2') format('woff2'),
+       url('fonts/Vazir.woff') format('woff'),
+       url('fonts/Vazir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Nastaliq';
+    src: url("../fonts/IranNastaliq.woff2") format('woff2'),
+         url("../fonts/IranNastaliq.woff") format('woff'),
+         url("../fonts/IranNastaliq.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* فونت و ریست */
+body {
+  margin: 0;
+  font-family: 'Vazir', sans-serif;
+  background: linear-gradient(135deg, #3e2723, #6d4c41, #a1887f);
+  color: #fff;
+}
+
+/* هدر */
+
+
+.logo {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+}
+
+.wellcome {
+	width: 100%;
+	margin: 0 auto;
+	opacity: 0;                /* اول مخفی باشه */
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 3s;       /* بعد از 3 ثانیه ظاهر بشه */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* هرو */
+.hero {
+  position: relative;
+  text-align: center;
+	overflow: hidden;
+}
+
+.headerimg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 0 2rem 2rem;
+  border-bottom: 1px solid #AD8E39;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  display: block;
+
+  /* اول تصویر بالای صفحه مخفی باشه */
+  transform: translateY(-100%);
+  opacity: 0;
+  
+  /* انیمیشن */
+  animation: slideDown 2s ease forwards;
+  animation-delay: 1s; /* بعد از ۲ ثانیه اجرا بشه */
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.argalogo{
+	width: 7rem;
+	position: absolute;
+	top: 1px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;                /* اول مخفی باشه */
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 3s;       /* بعد از 3 ثانیه ظاهر بشه */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* کارت‌ها */
+.menu {
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+
+.menu h5 {
+    color: #AD8E39;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+    text-align: right;
+    border-radius: 2rem;
+    border-right: 3px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+    padding: 1rem;
+    transition: all .4s;
+	margin: 0  0 2rem
+}
+
+.card-container{
+	display: grid;
+  grid-template-columns: repeat(2, 1fr); /* همیشه دو ستونه */
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 40%;
+  height: 180px;
+  object-fit: cover;
+  display: block
+}
+
+.card-content {
+  padding: 10px;
+  text-align: right;
+  flex: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #AD8E39;
+}
+
+.card-content p {
+  font-size: 15px;
+  margin: 10px 0;
+  font-family: 'Vazir', sans-serif 
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #29201D;
+}
+
+/* واکنش‌گرا */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+}
+
+/* دکمه اسکرول به بالا */
+#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #6b4226, #c69c72); /* گرادینت کافه‌ای */
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: none; /* اول مخفیه */
+}
+
+#scrollBtn:hover {
+  background: linear-gradient(135deg, #c69c72, #6b4226);
+  transform: scale(1.1);
+}
+
+.txtsocial{
+	width: 90%;
+	text-align: center;
+	padding: 1rem
+}
+
+.socialmedia{
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* همیشه دو ستونه */
+	justify-items: center;
+	padding: 0 1rem;
+}
+
+.media{
+	width: 30%;
+	border-radius: 2rem;
+	border: 2px solid #AD8E39;
+	overflow: hidden;
+	margin: 1rem;
+	transition: all.4s
+}
+
+.media:hover{
+	box-shadow: 2px 2px 50px 5px #AD8E39;
+	transition: all.4s
+}
+
+.media img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* فوتر */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  margin-top: 30px;
+  font-size: 14px;
+  border-radius: 2rem 2rem 0 0;
+  border-top: 1px solid #AD8E39;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.5);
+}
